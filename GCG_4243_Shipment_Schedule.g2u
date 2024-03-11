@@ -1,0 +1,243 @@
+Program.Sub.ScreenSU.Start
+Gui.SS_Form1..create
+Gui.SS_Form1..caption("Shipment Schedule")
+Gui.SS_Form1..size(4135,2210)
+Gui.SS_Form1..position(0,0)
+Gui.SS_Form1..alwaysontop(False)
+Gui.SS_Form1..fontname("Arial")
+Gui.SS_Form1..fontsize(8)
+Gui.SS_Form1..forecolor(0)
+Gui.SS_Form1..fontstyle(,,,)
+Gui.SS_Form1..BackColor(-2147483633)
+Gui.SS_Form1..controlbox(True)
+Gui.SS_Form1..maxbutton(False)
+Gui.SS_Form1..minbutton(False)
+Gui.SS_Form1..mousepointer(0)
+Gui.SS_Form1..moveable(True)
+Gui.SS_Form1..sizeable(False)
+Gui.SS_Form1..ShowInTaskBar(True)
+Gui.SS_Form1..titlebar(True)
+Gui.SS_Form1..MinX(0)
+Gui.SS_Form1..MinY(0)
+Gui.SS_Form1..Event(UnLoad,SS_Form1_UnLoad)
+Gui.SS_Form1.lbl_dtpBegDate.create(label,"Beginning Date",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_dtpBegDate.LabelStretch(True)
+Gui.SS_Form1.dtpBegDate.create(datepicker)
+Gui.SS_Form1.dtpBegDate.visible(True)
+Gui.SS_Form1.dtpBegDate.size(1800,345)
+Gui.SS_Form1.dtpBegDate.position(100,335)
+Gui.SS_Form1.dtpBegDate.enabled(True)
+Gui.SS_Form1.dtpBegDate.fontname("Arial")
+Gui.SS_Form1.dtpBegDate.tabstop(True)
+Gui.SS_Form1.dtpBegDate.tabindex(1)
+Gui.SS_Form1.lbl_dtpEndDate.create(label,"Ending Date",True,1800,200,1,1985,135,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_dtpEndDate.LabelStretch(True)
+Gui.SS_Form1.dtpEndDate.create(datepicker)
+Gui.SS_Form1.dtpEndDate.visible(True)
+Gui.SS_Form1.dtpEndDate.size(1800,345)
+Gui.SS_Form1.dtpEndDate.position(1985,335)
+Gui.SS_Form1.dtpEndDate.enabled(True)
+Gui.SS_Form1.dtpEndDate.fontname("Arial")
+Gui.SS_Form1.dtpEndDate.tabstop(True)
+Gui.SS_Form1.dtpEndDate.tabindex(2)
+Gui.SS_Form1.chkAllDates.create(checkbox)
+Gui.SS_Form1.chkAllDates.Caption("All Dates")
+Gui.SS_Form1.chkAllDates.visible(True)
+Gui.SS_Form1.chkAllDates.size(1800,300)
+Gui.SS_Form1.chkAllDates.position(105,690)
+Gui.SS_Form1.chkAllDates.enabled(True)
+Gui.SS_Form1.chkAllDates.fontname("Arial")
+Gui.SS_Form1.chkAllDates.fontsize(8)
+Gui.SS_Form1.chkAllDates.tabstop(True)
+Gui.SS_Form1.chkAllDates.tabindex(3)
+Gui.SS_Form1.chkAllDates.Event(Click,chkAllDates_Click)
+Gui.SS_Form1.cmdPrint.create(button)
+Gui.SS_Form1.cmdPrint.Caption("Print")
+Gui.SS_Form1.cmdPrint.visible(True)
+Gui.SS_Form1.cmdPrint.size(1005,360)
+Gui.SS_Form1.cmdPrint.position(105,1230)
+Gui.SS_Form1.cmdPrint.enabled(True)
+Gui.SS_Form1.cmdPrint.fontname("Arial")
+Gui.SS_Form1.cmdPrint.fontsize(8)
+Gui.SS_Form1.cmdPrint.tabstop(True)
+Gui.SS_Form1.cmdPrint.tabindex(4)
+Gui.SS_Form1.cmdPrint.Event(Click,cmdPrint_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.lBIRunID.Declare(Long,0)
+Variable.Global.lLogID.Declare(Long,0)
+Variable.Global.sDateSelection.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'opening connection
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+Gui.SS_Form1..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4243_Shipment_Schedule.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.SS_Form1_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("SS_Form1_UnLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'closing connection
+F.ODBC.Connection!con.Close
+'ending program
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SS_Form1_UnLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4243_Shipment_Schedule.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SS_Form1_UnLoad.End
+
+Program.Sub.chkAllDates_Click.Start
+F.Intrinsic.Control.SetErrorHandler("chkAllDates_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chkAllDates.Value,=,1)
+	'disableing datepickers if all dates is selected
+	Gui.SS_Form1.dtpBegDate.Enabled(False)
+	Gui.SS_Form1.dtpEndDate.Enabled(False)
+F.Intrinsic.Control.Else
+	'enabling datepickersi if all dates is not selected
+	Gui.SS_Form1.dtpBegDate.Enabled(True)
+	Gui.SS_Form1.dtpEndDate.Enabled(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkAllDates_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4243_Shipment_Schedule.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.chkAllDates_Click.End
+
+Program.Sub.cmdPrint_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdPrint_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sDate1.Declare(String)
+V.Local.sDate2.Declare(String)
+
+'Disappear the screen
+Gui.SS_Form1..Visible(False)
+
+F.Global.BI.GetRunID(V.Global.lBIRunID)
+
+F.Global.BI.StartLogging(V.Global.lBIRunID,-1,-1,"",V.Global.lLogID)
+
+V.Local.sDate1.Set(V.Screen.SS_Form1!dtpBegDate.Value)
+V.Local.sDate2.Set(V.Screen.SS_Form1!dtpEndDate.Value)
+
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chkAllDates.Value,=,1)
+	'creating sql query to populate datatable
+	F.Intrinsic.String.Build("Select {0} as Birunid, a.Date_Shipped, a.Customer, b.Part, c.Address_1_Ship, c.City_Ship, c.State_Ship, c.Country_Ship, a.Order_No, a.Order_Suffix From V_Shipment_Header a Left Join V_Shipment_Lines b",V.Global.lBIRunID,V.Local.sSql)
+	F.Intrinsic.String.Build("{0} on a.Order_No = b.Order_No and a.Order_Suffix = b.Order_Suffix Left Join V_Shipment_ShipTo c on a.Order_No = c.Order_No and a.Order_Suffix = c.Order_Suffix Order by a.Order_No,a.Order_Suffix",V.Local.sSql,V.Local.sSql)
+F.Intrinsic.Control.Else
+	'creating sql query to populate datatable
+	F.Intrinsic.String.Build("Select {0} as Birunid, a.Date_Shipped, a.Customer, b.Part, c.Address_1_Ship, c.City_Ship, c.State_Ship, c.Country_Ship, a.Order_No, a.Order_Suffix From V_Shipment_Header a Left Join V_Shipment_Lines b",V.Global.lBIRunID,V.Local.sSql)
+	F.Intrinsic.String.Build("{0} on a.Order_No = b.Order_No and a.Order_Suffix = b.Order_Suffix Left Join V_Shipment_ShipTo c on a.Order_No = c.Order_No and a.Order_Suffix = c.Order_Suffix Where a.Date_Shipped Between '{1}' and '{2}' Order by a.Order_No,a.Order_Suffix",V.Local.sSql,V.Local.sDate1.PervasiveDate,V.Local.sDate2.PervasiveDate,V.Local.sSql)
+F.Intrinsic.Control.EndIf
+
+'creating datatable
+F.Data.DataTable.CreateFromSQL("Schedule","con",V.Local.sSql,True)
+
+'saving to custom table
+F.Intrinsic.Control.If(V.DataTable.Schedule.RowCount,>=,0)
+	F.Data.DataTable.SaveToDB("Schedule","con","GCG_4243_Ship_Schd","",128)
+F.Intrinsic.Control.EndIf
+'stop logging
+F.Global.BI.StopLogging(V.Global.lLogID)
+
+'call sub to print report
+F.Intrinsic.Control.CallSub(Callbi)
+
+'call sub to end program
+F.Intrinsic.Control.CallSub(Ss_form1_unload)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdPrint_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4243_Shipment_Schedule.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdPrint_Click.End
+
+Program.Sub.CallBI.Start
+F.Intrinsic.Control.SetErrorHandler("CallBI_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sValues.Declare(String)
+V.Local.sParams.Declare(String)
+V.Local.iRet.Declare(Long)
+
+V.Local.sParams.Set("AllDates*!*DateSelection")
+F.Intrinsic.String.Build("{0}*!*{1}",V.Screen.SS_Form1!chkAllDates.Value,V.Global.sDateSelection,V.Local.sValues)
+
+F.Global.BI.RunReportPreProcessor(V.Global.lBIRunID,V.Global.lLogID,V.Local.sParams,V.Local.sValues,"",-1,True,"",-1,"",-1,"","",V.Local.iRet)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CallBI_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4243_Shipment_Schedule.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.CallBI.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$RLK$}$12/19/2016 2:16:19 PM$}$False
+Program.Sub.Comments.End
+
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::Shipment Schedule
+SS_Form1.CTRL{{NAME::dtpBegDate\\TYPE::6\\CAPTION::Beginning Date\\TABSTOP::1\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::dtpEndDate\\TYPE::6\\CAPTION::Ending Date\\TABSTOP::2\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::chkAllDates\\TYPE::9\\CAPTION::All Dates\\TABSTOP::3\\GROUP::-1\\SUBGROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdPrint\\TYPE::5\\CAPTION::Print\\TABSTOP::4\\GROUP::-1\\BROWSER::0\\SIZE::1
+
+Program.Sub.ScreenSS.End
+
