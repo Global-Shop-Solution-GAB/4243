@@ -1,0 +1,327 @@
+Program.Sub.ScreenSU.Start
+gui.SS_Form1..create
+gui.SS_Form1..caption("Frieght Charges")
+gui.SS_Form1..size(8720, 2895)
+gui.SS_Form1..position(0,0)
+gui.SS_Form1..alwaysontop(False)
+gui.SS_Form1..fontname("Arial")
+gui.SS_Form1..fontsize(8)
+gui.SS_Form1..forecolor(0)
+gui.SS_Form1..fontstyle(,,,,)
+gui.SS_Form1..BackColor(-2147483633)
+gui.SS_Form1..controlbox(True)
+gui.SS_Form1..maxbutton(False)
+gui.SS_Form1..minbutton(False)
+gui.SS_Form1..mousepointer(0)
+gui.SS_Form1..moveable(True)
+gui.SS_Form1..sizeable(False)
+gui.SS_Form1..ShowInTaskBar(True)
+gui.SS_Form1..titlebar(True)
+gui.SS_Form1..event(unload,  ss_form1_unload)
+gui.SS_Form1.lbl_txtDriver.create(label,"Driver",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.lbl_txtDriver.LabelStretch(True)
+gui.SS_Form1.txtDriver.create(textbox,"",True,2700,330,1,100,335,True,0,Arial,8,16777215,1)
+
+gui.SS_Form1.lbl_txtTruck.create(label,"Truck Number",True,1800,200,1,2885,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.lbl_txtTruck.LabelStretch(True)
+gui.SS_Form1.txtTruck.create(textbox,"",True,2700,330,1,2885,335,True,0,Arial,8,16777215,1)
+
+gui.SS_Form1.lbl_txtTrailer.create(label,"Tailer Number",True,1800,200,1,5670,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.lbl_txtTrailer.LabelStretch(True)
+gui.SS_Form1.txtTrailer.create(textbox,"",True,2700,330,1,5670,335,True,0,Arial,8,16777215,1)
+
+gui.SS_Form1.lbl_txtPermit.create(label,"Permit Cost",True,1800,200,1,100,835,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.lbl_txtPermit.LabelStretch(True)
+gui.SS_Form1.txtPermit.create(textbox,"",True,1800,330,1,100,1035,True,0,Arial,8,16777215,1)
+
+gui.SS_Form1.lbl_txtPilot.create(label,"Pilot Car Cost",True,1800,200,1,1985,835,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.lbl_txtPilot.LabelStretch(True)
+gui.SS_Form1.txtPilot.create(textbox,"",True,1800,330,1,1985,1035,True,0,Arial,8,16777215,1)
+
+gui.SS_Form1.lbl_txtMile.create(label,"Cost Per Mile",True,1800,200,1,3870,835,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.lbl_txtMile.LabelStretch(True)
+gui.SS_Form1.txtMile.create(textbox,"",True,1800,330,1,3870,1035,True,0,Arial,8,16777215,1)
+
+gui.SS_Form1.chkAccept.create(checkbox)
+gui.SS_Form1.chkAccept.Caption("Customer Accepts Ship Date")
+gui.SS_Form1.chkAccept.visible(True)
+gui.SS_Form1.chkAccept.size(3600, 300)
+gui.SS_Form1.chkAccept.position(100, 1370)
+gui.SS_Form1.chkAccept.enabled(True)
+gui.SS_Form1.chkAccept.fontname("Arial")
+gui.SS_Form1.chkAccept.fontsize(8)
+
+gui.SS_Form1.cmdAdd.create(button)
+gui.SS_Form1.cmdAdd.Caption("Save")
+gui.SS_Form1.cmdAdd.visible(True)
+gui.SS_Form1.cmdAdd.size(1000, 360)
+gui.SS_Form1.cmdAdd.position(100, 1920)
+gui.SS_Form1.cmdAdd.enabled(True)
+gui.SS_Form1.cmdAdd.fontname("Arial")
+gui.SS_Form1.cmdAdd.fontsize(8)
+gui.SS_Form1.cmdAdd.event(click,  cmdsave_click)
+
+gui.SS_Form1.txtDriver.tabstop(true)
+gui.SS_Form1.txtDriver.tabindex(1)
+gui.SS_Form1.txtTruck.tabstop(true)
+gui.SS_Form1.txtTruck.tabindex(2)
+gui.SS_Form1.txtTrailer.tabstop(true)
+gui.SS_Form1.txtTrailer.tabindex(3)
+gui.SS_Form1.txtPermit.tabstop(true)
+gui.SS_Form1.txtPermit.tabindex(4)
+gui.SS_Form1.txtPilot.tabstop(true)
+gui.SS_Form1.txtPilot.tabindex(5)
+gui.SS_Form1.txtMile.tabstop(true)
+gui.SS_Form1.txtMile.tabindex(6)
+gui.SS_Form1.chkAccept.tabstop(true)
+gui.SS_Form1.chkAccept.tabindex(7)
+gui.SS_Form1.cmdAdd.tabstop(true)
+gui.SS_Form1.cmdAdd.tabindex(8)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.sOrder_No.Declare(String)
+Variable.Global.sSuffix.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+
+'changing text of script 1 button
+F.Intrinsic.Control.If(V.Caller.Hook,=,"25910")
+	V.Passed.000204.Set("Freight Cost Values")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndIf
+
+'opening connection
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+'sript will only run on hook 25980
+F.Intrinsic.Control.If(V.Caller.Hook,=,"25980")
+	F.Intrinsic.Control.If(V.Passed.000150.Length,>,0)
+		V.Global.sOrder_No.Set(V.Passed.000150.Format*0000000#)
+		F.Intrinsic.Control.If(V.Passed.000151.Length,>,0)
+			V.Global.sSuffix.Set(V.Passed.000151.Format*00000)
+		F.Intrinsic.Control.Else
+			V.Global.sSuffix.Set("0000")
+		F.Intrinsic.Control.EndIf
+		'creating datatble to save to later
+		F.Intrinsic.Control.CallSub(builddatatable)
+		Gui.SS_Form1..Show
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.CallSub(ss_form1_unload)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4243_Freight_Cost.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.SS_Form1_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("SS_Form1_UnLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'closing datatable if it's still open
+F.Intrinsic.Control.If(V.DataTable.Order.Exist,=,True)
+	F.Data.DataTable.Close("Order")
+F.Intrinsic.Control.EndIf
+
+'closing connection
+F.ODBC.Connection!con.Close
+'ending program
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SS_Form1_UnLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4243_Freight_Cost.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SS_Form1_UnLoad.End
+
+Program.Sub.cmdSave_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdSave_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'calling sub to check frieght cost
+F.Intrinsic.Control.CallSub(checkfrieghtcost)
+
+'update datatable
+F.Intrinsic.Control.CallSub(updatedatatable)
+
+'saving datatable to custom table
+F.Data.DataTable.SaveToDB("Order","con","GCG_4243_FreightCost","Order_No*!*Order_Suffix")
+
+'closing dattable
+F.Data.DataTable.Close("Order")
+
+'calling the unload sub
+F.Intrinsic.Control.CallSub(ss_form1_unload)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdSave_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4243_Freight_Cost.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdSave_Click.End
+
+Program.Sub.CheckFrieghtCost.Start
+F.Intrinsic.Control.SetErrorHandler("CheckFrieghtCost_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.iTotal.Declare(Long)
+
+'checking to see if the cost the user entered ='s the amount of frieght cost in Global Shop if not notify the user
+F.Intrinsic.Math.Add(V.Local.iTotal,V.Screen.SS_Form1!txtMile.Text,V.Local.iTotal)
+F.Intrinsic.Math.Add(V.Local.iTotal,V.Screen.SS_Form1!txtPermit.Text,V.Local.iTotal)
+F.Intrinsic.Math.Add(V.Local.iTotal,V.Screen.SS_Form1!txtPilot.Text,V.Local.iTotal)
+
+
+'getting frieght cost
+F.Intrinsic.String.Build("Select Cost From SHIPMENT_LINES Where Order_No = '{0}' and Order_Suffix = '{1}' and Line_Type = 'F'",V.Global.sOrder_No,V.Global.sSuffix,V.Local.sSql)
+F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,False)
+	F.Intrinsic.Control.If(V.Local.iTotal,=,V.ODBC.con!rst.FieldValFloat!Cost)
+		Gui.SS_Form1.cmdAdd.Enabled(True)
+	F.Intrinsic.Control.Else
+		Gui.SS_Form1.cmdAdd.Enabled(False)
+		F.Intrinsic.UI.Msgbox("Freight Cost Specific Values does not equal Frieght Cost")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("No Freight has been added to Order Nubmer: {0} Suffix: {1}",V.Global.sOrder_No,V.Global.sSuffix,V.Local.sSql)
+	F.Intrinsic.UI.Msgbox(V.Local.sSql)
+F.Intrinsic.Control.EndIf
+
+F.ODBC.con!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CheckFrieghtCost_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4243_Freight_Cost.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.CheckFrieghtCost.End
+
+Program.Sub.BuildDataTable.Start
+F.Intrinsic.Control.SetErrorHandler("BuildDataTable_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+
+'creating datatble to save to later
+F.Intrinsic.String.Build("Select Order_No, Order_Suffix, Driver, Truck_No, Trailer_No, Permit_Cost, Pilot_Cost,Cost_Per_Mile, Customer_Accpt From GCG_4243_FreightCost Where Order_No = '{0}' and Order_Suffix = '{1}'",V.Global.sOrder_No,V.Global.sSuffix,V.Local.sSql)
+
+F.Data.DataTable.CreateFromSQL("Order","con",V.Local.sSql,True)
+
+F.Intrinsic.Control.If(V.DataTable.Order.RowCount--,=,0)
+	'setting save information to text boxes
+	Gui.SS_Form1.txtDriver.Text(V.DataTable.Order(0).Driver!FieldValTrim)
+	Gui.SS_Form1.txtTruck.Text(V.DataTable.Order(0).Truck_No!FieldValTrim)
+	Gui.SS_Form1.txtTrailer.Text(V.DataTable.Order(0).Trailer_No!FieldValTrim)
+	Gui.SS_Form1.txtPermit.Text(V.DataTable.Order(0).Permit_Cost!FieldValFloat)
+	Gui.SS_Form1.txtPilot.Text(V.DataTable.Order(0).Pilot_Cost!FieldValFloat)
+	Gui.SS_Form1.txtMile.Text(V.DataTable.Order(0).Cost_Per_Mile!FieldValFloat)
+	Gui.SS_Form1.chkAccept.Value(V.DataTable.Order(0).Customer_Accpt!FieldVal)
+F.Intrinsic.Control.Else
+	'clearing text boxes
+	Gui.SS_Form1.txtDriver.Text("")
+	Gui.SS_Form1.txtTruck.Text("")
+	Gui.SS_Form1.txtTrailer.Text("")
+	Gui.SS_Form1.txtPermit.Text("")
+	Gui.SS_Form1.txtPilot.Text("")
+	Gui.SS_Form1.txtMile.Text("")
+	Gui.SS_Form1.chkAccept.Value(0)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("BuildDataTable_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4243_Freight_Cost.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.BuildDataTable.End
+
+Program.Sub.UpdateDataTable.Start
+F.Intrinsic.Control.SetErrorHandler("UpdateDataTable_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.DataTable.Order.RowCount--,=,0)
+	'updating values before saving
+	F.Data.DataTable.SetValue("Order",0,"Driver",V.Screen.SS_Form1!txtDriver.Text,"Truck_No",V.Screen.SS_Form1!txtTruck.Text,"Trailer_No",V.Screen.SS_Form1!txtTrailer.Text,"Permit_Cost",V.Screen.SS_Form1!txtPermit.Text,"Pilot_Cost",V.Screen.SS_Form1!txtPilot.Text,"Cost_Per_Mile",V.Screen.SS_Form1!txtMile.Text,"Customer_Accpt",V.Screen.SS_Form1!chkAccept.Value)
+F.Intrinsic.Control.Else
+	'adding new record
+	F.Data.DataTable.AddRow("Order","Order_No",V.Global.sOrder_No,"Order_Suffix",V.Global.sSuffix,"Driver",V.Screen.SS_Form1!txtDriver.Text,"Truck_No",V.Screen.SS_Form1!txtTruck.Text,"Trailer_No",V.Screen.SS_Form1!txtTrailer.Text,"Permit_Cost",V.Screen.SS_Form1!txtPermit.Text,"Pilot_Cost",V.Screen.SS_Form1!txtPilot.Text,"Cost_Per_Mile",V.Screen.SS_Form1!txtMile.Text,"Customer_Accpt",V.Screen.SS_Form1!chkAccept.Value)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("UpdateDataTable_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4243_Freight_Cost.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.UpdateDataTable.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_4243_Freight_Cost$}$RLK$}$12/19/2016 8:58:25 AM$}$False
+${$1$}$$}$$}$1$}$25910$}$OES099 Populate Hook$}$12/19/2016 12:54:12 PM$}$(Program: ORD099GI?; Screen: OES099)
+
+${$1$}$$}$$}$0$}$25980$}$OES099-SCRIPT-1$}$12/19/2016 8:58:25 AM$}$(Program: ORD099GI; Screen: OES099)
+
+Program.Sub.Comments.End
+
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::Frieght Charges
+SS_Form1.CTRL{{NAME::txtDriver\\TYPE::2\\CAPTION::Driver\\TABSTOP::1\\GROUP::1\\BROWSER::0\\SIZE::1.5
+SS_Form1.CTRL{{NAME::txtTruck\\TYPE::2\\CAPTION::Truck Number\\TABSTOP::2\\GROUP::1\\BROWSER::0\\SIZE::1.5
+SS_Form1.CTRL{{NAME::txtTrailer\\TYPE::2\\CAPTION::Tailer Number\\TABSTOP::3\\GROUP::1\\BROWSER::0\\SIZE::1.5
+SS_Form1.CTRL{{NAME::txtPermit\\TYPE::2\\CAPTION::Permit Cost\\TABSTOP::4\\GROUP::2\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtPilot\\TYPE::2\\CAPTION::Pilot Car Cost\\TABSTOP::5\\GROUP::2\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtMile\\TYPE::2\\CAPTION::Cost Per Mile\\TABSTOP::6\\GROUP::2\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::chkAccept\\TYPE::9\\CAPTION::Customer Accepts Ship Date\\TABSTOP::7\\GROUP::-1\\SUBGROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdAdd\\TYPE::5\\CAPTION::Save\\TABSTOP::8\\GROUP::-1\\BROWSER::0\\SIZE::1
+
+Program.Sub.ScreenSS.End
