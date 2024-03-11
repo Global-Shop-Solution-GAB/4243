@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SyntaxEdit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pages>
+    <DefaultPage>
+      <Header />
+      <Footer />
+    </DefaultPage>
+  </Pages>
+  <DisplayStrings />
+  <Selection>
+    <SelectionRect>
+      <Location>
+        <X>0</X>
+        <Y>307</Y>
+      </Location>
+      <Size>
+        <Width>24</Width>
+        <Height>6</Height>
+      </Size>
+      <X>0</X>
+      <Y>307</Y>
+      <Width>24</Width>
+      <Height>6</Height>
+    </SelectionRect>
+    <Options>UseColors OverwriteBlocks SelectLineOnTripleClick CopyLineWhenEmpty SelectWordOnCtrlClick</Options>
+  </Selection>
+  <Gutter>
+    <Options>PaintLineNumbers PaintBookMarks PaintLineModificators</Options>
+  </Gutter>
+  <Margin>
+    <Visible>false</Visible>
+  </Margin>
+  <LineStyles />
+  <LineSeparator />
+  <Printing>
+    <Footer />
+    <Header />
+  </Printing>
+  <WhiteSpace />
+  <TextSource>
+    <Position>
+      <X>0</X>
+      <Y>307</Y>
+    </Position>
+    <Lexer>
+      <Scheme>
+        <Author>Quantum Whale, LLC.</Author>
+        <Copyright>Copyright (c) 2004 - 2014 Quantum Whale LLC.</Copyright>
+        <FileType>gas</FileType>
+        <Version>1.5</Version>
+        <Styles>
+          <Style>
+            <Name>idents</Name>
+            <ForeColor>ControlText</ForeColor>
+          </Style>
+          <Style>
+            <Name>numbers</Name>
+            <ForeColor>ControlText</ForeColor>
+          </Style>
+          <Style>
+            <Name>reswords</Name>
+            <ForeColor>Blue</ForeColor>
+          </Style>
+          <Style>
+            <Name>comments</Name>
+            <ForeColor>Green</ForeColor>
+            <PlainText>true</PlainText>
+          </Style>
+          <Style>
+            <Name>xmlcomments</Name>
+            <ForeColor>Gray</ForeColor>
+          </Style>
+          <Style>
+            <Name>symbols</Name>
+            <ForeColor>WindowText</ForeColor>
+          </Style>
+          <Style>
+            <Name>whitespace</Name>
+            <ForeColor>WindowText</ForeColor>
+          </Style>
+          <Style>
+            <Name>strings</Name>
+            <ForeColor>Maroon</ForeColor>
+            <PlainText>true</PlainText>
+          </Style>
+          <Style>
+            <Name>directives</Name>
+            <ForeColor>Blue</ForeColor>
+          </Style>
+          <Style>
+            <Name>htmlparams</Name>
+            <ForeColor>Red</ForeColor>
+          </Style>
+          <Style>
+            <Name>syntax errors</Name>
+            <ForeColor>Red</ForeColor>
+          </Style>
+          <Style>
+            <Name>codes nippets</Name>
+            <ForeColor>Black</ForeColor>
+            <BackColor>255:180:228:180</BackColor>
+          </Style>
+          <Style>
+            <Name>GabReservedWords</Name>
+            <ForeColor>Blue</ForeColor>
+          </Style>
+          <Style>
+            <Name>GabTokenWithBrackets</Name>
+            <ForeColor>Gray</ForeColor>
+          </Style>
+          <Style>
+            <Name>GabFunctionIntrinsicDebug</Name>
+            <ForeColor>White</ForeColor>
+            <BackColor>Red</BackColor>
+            <FontStyle>Bold</FontStyle>
+            <PlainText>true</PlainText>
+          </Style>
+          <Style>
+            <Name>GabVariable</Name>
+            <ForeColor>Teal</ForeColor>
+          </Style>
+          <Style>
+            <Name>GabVariableSystemDefined</Name>
+            <ForeColor>Teal</ForeColor>
+            <FontStyle>Bold Italic</FontStyle>
+          </Style>
+          <Style>
+            <Name>GabGui</Name>
+            <ForeColor>OrangeRed</ForeColor>
+          </Style>
+          <Style>
+            <Name>GabProgramSubStartEnd</Name>
+            <ForeColor>Black</ForeColor>
+            <BackColor>LightGray</BackColor>
+            <FontStyle>Bold</FontStyle>
+            <PlainText>true</PlainText>
+          </Style>
+        </Styles>
+      </Scheme>
+    </Lexer>
+    <TextStrings>
+      <Lines>
+        <string>Program.Sub.ScreenSU.Start</string>
+        <string>gui.SS_Form1..create</string>
+        <string>gui.SS_Form1..caption("Frieght Charges")</string>
+        <string>gui.SS_Form1..size(8720, 2895)</string>
+        <string>gui.SS_Form1..position(0,0)</string>
+        <string>gui.SS_Form1..alwaysontop(False)</string>
+        <string>gui.SS_Form1..fontname("Arial")</string>
+        <string>gui.SS_Form1..fontsize(8)</string>
+        <string>gui.SS_Form1..forecolor(0)</string>
+        <string>gui.SS_Form1..fontstyle(,,,,)</string>
+        <string>gui.SS_Form1..BackColor(-2147483633)</string>
+        <string>gui.SS_Form1..controlbox(True)</string>
+        <string>gui.SS_Form1..maxbutton(False)</string>
+        <string>gui.SS_Form1..minbutton(False)</string>
+        <string>gui.SS_Form1..mousepointer(0)</string>
+        <string>gui.SS_Form1..moveable(True)</string>
+        <string>gui.SS_Form1..sizeable(False)</string>
+        <string>gui.SS_Form1..ShowInTaskBar(True)</string>
+        <string>gui.SS_Form1..titlebar(True)</string>
+        <string>gui.SS_Form1..event(unload,  ss_form1_unload)</string>
+        <string>gui.SS_Form1.lbl_txtDriver.create(label,"Driver",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)</string>
+        <string>gui.SS_Form1.lbl_txtDriver.LabelStretch(True)</string>
+        <string>gui.SS_Form1.txtDriver.create(textbox,"",True,2700,330,1,100,335,True,0,Arial,8,16777215,1)</string>
+        <string />
+        <string>gui.SS_Form1.lbl_txtTruck.create(label,"Truck Number",True,1800,200,1,2885,135,True,0,Arial,8,-2147483633,0)</string>
+        <string>gui.SS_Form1.lbl_txtTruck.LabelStretch(True)</string>
+        <string>gui.SS_Form1.txtTruck.create(textbox,"",True,2700,330,1,2885,335,True,0,Arial,8,16777215,1)</string>
+        <string />
+        <string>gui.SS_Form1.lbl_txtTrailer.create(label,"Tailer Number",True,1800,200,1,5670,135,True,0,Arial,8,-2147483633,0)</string>
+        <string>gui.SS_Form1.lbl_txtTrailer.LabelStretch(True)</string>
+        <string>gui.SS_Form1.txtTrailer.create(textbox,"",True,2700,330,1,5670,335,True,0,Arial,8,16777215,1)</string>
+        <string />
+        <string>gui.SS_Form1.lbl_txtPermit.create(label,"Permit Cost",True,1800,200,1,100,835,True,0,Arial,8,-2147483633,0)</string>
+        <string>gui.SS_Form1.lbl_txtPermit.LabelStretch(True)</string>
+        <string>gui.SS_Form1.txtPermit.create(textbox,"",True,1800,330,1,100,1035,True,0,Arial,8,16777215,1)</string>
+        <string />
+        <string>gui.SS_Form1.lbl_txtPilot.create(label,"Pilot Car Cost",True,1800,200,1,1985,835,True,0,Arial,8,-2147483633,0)</string>
+        <string>gui.SS_Form1.lbl_txtPilot.LabelStretch(True)</string>
+        <string>gui.SS_Form1.txtPilot.create(textbox,"",True,1800,330,1,1985,1035,True,0,Arial,8,16777215,1)</string>
+        <string />
+        <string>gui.SS_Form1.lbl_txtMile.create(label,"Cost Per Mile",True,1800,200,1,3870,835,True,0,Arial,8,-2147483633,0)</string>
+        <string>gui.SS_Form1.lbl_txtMile.LabelStretch(True)</string>
+        <string>gui.SS_Form1.txtMile.create(textbox,"",True,1800,330,1,3870,1035,True,0,Arial,8,16777215,1)</string>
+        <string />
+        <string>gui.SS_Form1.chkAccept.create(checkbox)</string>
+        <string>gui.SS_Form1.chkAccept.Caption("Customer Accepts Ship Date")</string>
+        <string>gui.SS_Form1.chkAccept.visible(True)</string>
+        <string>gui.SS_Form1.chkAccept.size(3600, 300)</string>
+        <string>gui.SS_Form1.chkAccept.position(100, 1370)</string>
+        <string>gui.SS_Form1.chkAccept.enabled(True)</string>
+        <string>gui.SS_Form1.chkAccept.fontname("Arial")</string>
+        <string>gui.SS_Form1.chkAccept.fontsize(8)</string>
+        <string />
+        <string>gui.SS_Form1.cmdAdd.create(button)</string>
+        <string>gui.SS_Form1.cmdAdd.Caption("Save")</string>
+        <string>gui.SS_Form1.cmdAdd.visible(True)</string>
+        <string>gui.SS_Form1.cmdAdd.size(1000, 360)</string>
+        <string>gui.SS_Form1.cmdAdd.position(100, 1920)</string>
+        <string>gui.SS_Form1.cmdAdd.enabled(True)</string>
+        <string>gui.SS_Form1.cmdAdd.fontname("Arial")</string>
+        <string>gui.SS_Form1.cmdAdd.fontsize(8)</string>
+        <string>gui.SS_Form1.cmdAdd.event(click,  cmdsave_click)</string>
+        <string />
+        <string>gui.SS_Form1.txtDriver.tabstop(true)</string>
+        <string>gui.SS_Form1.txtDriver.tabindex(1)</string>
+        <string>gui.SS_Form1.txtTruck.tabstop(true)</string>
+        <string>gui.SS_Form1.txtTruck.tabindex(2)</string>
+        <string>gui.SS_Form1.txtTrailer.tabstop(true)</string>
+        <string>gui.SS_Form1.txtTrailer.tabindex(3)</string>
+        <string>gui.SS_Form1.txtPermit.tabstop(true)</string>
+        <string>gui.SS_Form1.txtPermit.tabindex(4)</string>
+        <string>gui.SS_Form1.txtPilot.tabstop(true)</string>
+        <string>gui.SS_Form1.txtPilot.tabindex(5)</string>
+        <string>gui.SS_Form1.txtMile.tabstop(true)</string>
+        <string>gui.SS_Form1.txtMile.tabindex(6)</string>
+        <string>gui.SS_Form1.chkAccept.tabstop(true)</string>
+        <string>gui.SS_Form1.chkAccept.tabindex(7)</string>
+        <string>gui.SS_Form1.cmdAdd.tabstop(true)</string>
+        <string>gui.SS_Form1.cmdAdd.tabindex(8)</string>
+        <string>Program.Sub.ScreenSU.End</string>
+        <string />
+        <string>Program.Sub.Preflight.Start</string>
+        <string>Variable.Global.sOrder_No.Declare(String)</string>
+        <string>Variable.Global.sSuffix.Declare(String)</string>
+        <string>Program.Sub.Preflight.End</string>
+        <string />
+        <string>Program.Sub.Main.Start</string>
+        <string>F.Intrinsic.Control.SetErrorHandler("Main_Err")</string>
+        <string>F.Intrinsic.Control.ClearErrors</string>
+        <string />
+        <string>V.Local.sError.Declare(String)</string>
+        <string>V.Local.sSql.Declare(String)</string>
+        <string />
+        <string>'changing text of script 1 button</string>
+        <string>F.Intrinsic.Control.If(V.Caller.Hook,=,"25910")</string>
+        <string>	V.Passed.000204.Set("Freight Cost Values")</string>
+        <string>	F.Intrinsic.Control.End</string>
+        <string />
+        <string>F.Intrinsic.Control.EndIf</string>
+        <string />
+        <string>'opening connection</string>
+        <string>F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)</string>
+        <string />
+        <string>'sript will only run on hook 25980</string>
+        <string>F.Intrinsic.Control.If(V.Caller.Hook,=,"25980")</string>
+        <string>	F.Intrinsic.Control.If(V.Passed.000150.Length,&gt;,0)</string>
+        <string>		V.Global.sOrder_No.Set(V.Passed.000150.Format*0000000#)</string>
+        <string>		F.Intrinsic.Control.If(V.Passed.000151.Length,&gt;,0)</string>
+        <string>			V.Global.sSuffix.Set(V.Passed.000151.Format*00000)</string>
+        <string>		F.Intrinsic.Control.Else</string>
+        <string>			V.Global.sSuffix.Set("0000")</string>
+        <string>		F.Intrinsic.Control.EndIf</string>
+        <string>		'creating datatble to save to later</string>
+        <string>		F.Intrinsic.Control.CallSub(builddatatable)</string>
+        <string>		Gui.SS_Form1..Show</string>
+        <string>	F.Intrinsic.Control.Else</string>
+        <string>		F.Intrinsic.Control.CallSub(ss_form1_unload)</string>
+        <string>	F.Intrinsic.Control.EndIf</string>
+        <string>F.Intrinsic.Control.Else</string>
+        <string>	F.Intrinsic.Control.CallSub(ss_form1_unload)</string>
+        <string>F.Intrinsic.Control.EndIf</string>
+        <string />
+        <string>F.Intrinsic.Control.ExitSub</string>
+        <string />
+        <string>F.Intrinsic.Control.Label("Main_Err")</string>
+        <string>F.Intrinsic.Control.If(V.Ambient.ErrorNumber,&lt;&gt;,0)</string>
+        <string>	Function.Intrinsic.String.Concat("Project: GCG_4243_Freight_Cost.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)</string>
+        <string>	F.Intrinsic.UI.Msgbox(V.Local.sError)</string>
+        <string>	F.Intrinsic.Control.CallSub(ss_form1_unload)</string>
+        <string>Function.Intrinsic.Control.EndIf</string>
+        <string />
+        <string />
+        <string>Program.Sub.Main.End</string>
+        <string />
+        <string>Program.Sub.SS_Form1_UnLoad.Start</string>
+        <string>F.Intrinsic.Control.SetErrorHandler("SS_Form1_UnLoad_Err")</string>
+        <string>F.Intrinsic.Control.ClearErrors</string>
+        <string />
+        <string>V.Local.sError.Declare(String)</string>
+        <string />
+        <string>'closing datatable if it's still open</string>
+        <string>F.Intrinsic.Control.If(V.DataTable.Order.Exist,=,True)</string>
+        <string>	F.Data.DataTable.Close("Order")</string>
+        <string>F.Intrinsic.Control.EndIf</string>
+        <string />
+        <string>'closing connection</string>
+        <string>F.ODBC.Connection!con.Close</string>
+        <string>'ending program</string>
+        <string>F.Intrinsic.Control.End</string>
+        <string />
+        <string>F.Intrinsic.Control.ExitSub</string>
+        <string />
+        <string>F.Intrinsic.Control.Label("SS_Form1_UnLoad_Err")</string>
+        <string>F.Intrinsic.Control.If(V.Ambient.ErrorNumber,&lt;&gt;,0)</string>
+        <string>	Function.Intrinsic.String.Concat("Project: GCG_4243_Freight_Cost.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)</string>
+        <string>	F.Intrinsic.UI.Msgbox(V.Local.sError)</string>
+        <string>	F.Intrinsic.Control.End</string>
+        <string />
+        <string>Function.Intrinsic.Control.EndIf</string>
+        <string />
+        <string />
+        <string>Program.Sub.SS_Form1_UnLoad.End</string>
+        <string />
+        <string>Program.Sub.cmdSave_Click.Start</string>
+        <string>F.Intrinsic.Control.SetErrorHandler("cmdSave_Click_Err")</string>
+        <string>F.Intrinsic.Control.ClearErrors</string>
+        <string />
+        <string>V.Local.sError.Declare(String)</string>
+        <string />
+        <string>'calling sub to check frieght cost</string>
+        <string>F.Intrinsic.Control.CallSub(checkfrieghtcost)</string>
+        <string />
+        <string>'update datatable</string>
+        <string>F.Intrinsic.Control.CallSub(updatedatatable)</string>
+        <string />
+        <string>'saving datatable to custom table</string>
+        <string>F.Data.DataTable.SaveToDB("Order","con","GCG_4243_FreightCost","Order_No*!*Order_Suffix")</string>
+        <string />
+        <string>'closing dattable</string>
+        <string>F.Data.DataTable.Close("Order")</string>
+        <string />
+        <string>'calling the unload sub</string>
+        <string>F.Intrinsic.Control.CallSub(ss_form1_unload)</string>
+        <string />
+        <string>F.Intrinsic.Control.ExitSub</string>
+        <string />
+        <string>F.Intrinsic.Control.Label("cmdSave_Click_Err")</string>
+        <string>F.Intrinsic.Control.If(V.Ambient.ErrorNumber,&lt;&gt;,0)</string>
+        <string>	Function.Intrinsic.String.Concat("Project: GCG_4243_Freight_Cost.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)</string>
+        <string>	F.Intrinsic.UI.Msgbox(V.Local.sError)</string>
+        <string>Function.Intrinsic.Control.EndIf</string>
+        <string />
+        <string />
+        <string>Program.Sub.cmdSave_Click.End</string>
+        <string />
+        <string>Program.Sub.CheckFrieghtCost.Start</string>
+        <string>F.Intrinsic.Control.SetErrorHandler("CheckFrieghtCost_Err")</string>
+        <string>F.Intrinsic.Control.ClearErrors</string>
+        <string />
+        <string>V.Local.sError.Declare(String)</string>
+        <string>V.Local.sSql.Declare(String)</string>
+        <string>V.Local.iTotal.Declare(Long)</string>
+        <string />
+        <string>'checking to see if the cost the user entered ='s the amount of frieght cost in Global Shop if not notify the user</string>
+        <string>F.Intrinsic.Math.Add(V.Local.iTotal,V.Screen.SS_Form1!txtMile.Text,V.Local.iTotal)</string>
+        <string>F.Intrinsic.Math.Add(V.Local.iTotal,V.Screen.SS_Form1!txtPermit.Text,V.Local.iTotal)</string>
+        <string>F.Intrinsic.Math.Add(V.Local.iTotal,V.Screen.SS_Form1!txtPilot.Text,V.Local.iTotal)</string>
+        <string />
+        <string />
+        <string>'getting frieght cost</string>
+        <string>F.Intrinsic.String.Build("Select Cost From SHIPMENT_LINES Where Order_No = '{0}' and Order_Suffix = '{1}' and Line_Type = 'F'",V.Global.sOrder_No,V.Global.sSuffix,V.Local.sSql)</string>
+        <string>F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSql)</string>
+        <string>F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,False)</string>
+        <string>	F.Intrinsic.Control.If(V.Local.iTotal,=,V.ODBC.con!rst.FieldValFloat!Cost)</string>
+        <string>		Gui.SS_Form1.cmdAdd.Enabled(True)</string>
+        <string>	F.Intrinsic.Control.Else</string>
+        <string>		Gui.SS_Form1.cmdAdd.Enabled(False)</string>
+        <string>		F.Intrinsic.UI.Msgbox("Freight Cost Specific Values does not equal Frieght Cost")</string>
+        <string>	F.Intrinsic.Control.EndIf</string>
+        <string>F.Intrinsic.Control.Else</string>
+        <string>	F.Intrinsic.String.Build("No Freight has been added to Order Nubmer: {0} Suffix: {1}",V.Global.sOrder_No,V.Global.sSuffix,V.Local.sSql)</string>
+        <string>	F.Intrinsic.UI.Msgbox(V.Local.sSql)</string>
+        <string>F.Intrinsic.Control.EndIf</string>
+        <string />
+        <string>F.ODBC.con!rst.Close</string>
+        <string />
+        <string>F.Intrinsic.Control.ExitSub</string>
+        <string />
+        <string>F.Intrinsic.Control.Label("CheckFrieghtCost_Err")</string>
+        <string>F.Intrinsic.Control.If(V.Ambient.ErrorNumber,&lt;&gt;,0)</string>
+        <string>	Function.Intrinsic.String.Concat("Project: GCG_4243_Freight_Cost.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)</string>
+        <string>	F.Intrinsic.UI.Msgbox(V.Local.sError)</string>
+        <string>	F.Intrinsic.Control.CallSub(ss_form1_unload)</string>
+        <string>Function.Intrinsic.Control.EndIf</string>
+        <string />
+        <string />
+        <string>Program.Sub.CheckFrieghtCost.End</string>
+        <string />
+        <string>Program.Sub.BuildDataTable.Start</string>
+        <string>F.Intrinsic.Control.SetErrorHandler("BuildDataTable_Err")</string>
+        <string>F.Intrinsic.Control.ClearErrors</string>
+        <string />
+        <string>V.Local.sError.Declare(String)</string>
+        <string>V.Local.sSql.Declare(String)</string>
+        <string />
+        <string>'creating datatble to save to later</string>
+        <string>F.Intrinsic.String.Build("Select Order_No, Order_Suffix, Driver, Truck_No, Trailer_No, Permit_Cost, Pilot_Cost,Cost_Per_Mile, Customer_Accpt From GCG_4243_FreightCost Where Order_No = '{0}' and Order_Suffix = '{1}'",V.Global.sOrder_No,V.Global.sSuffix,V.Local.sSql)</string>
+        <string />
+        <string>F.Data.DataTable.CreateFromSQL("Order","con",V.Local.sSql,True)</string>
+        <string />
+        <string>F.Intrinsic.Control.If(V.DataTable.Order.RowCount--,=,0)</string>
+        <string>	'setting save information to text boxes</string>
+        <string>	Gui.SS_Form1.txtDriver.Text(V.DataTable.Order(0).Driver!FieldValTrim)</string>
+        <string>	Gui.SS_Form1.txtTruck.Text(V.DataTable.Order(0).Truck_No!FieldValTrim)</string>
+        <string>	Gui.SS_Form1.txtTrailer.Text(V.DataTable.Order(0).Trailer_No!FieldValTrim)</string>
+        <string>	Gui.SS_Form1.txtPermit.Text(V.DataTable.Order(0).Permit_Cost!FieldValFloat)</string>
+        <string>	Gui.SS_Form1.txtPilot.Text(V.DataTable.Order(0).Pilot_Cost!FieldValFloat)</string>
+        <string>	Gui.SS_Form1.txtMile.Text(V.DataTable.Order(0).Cost_Per_Mile!FieldValFloat)</string>
+        <string>	Gui.SS_Form1.chkAccept.Value(V.DataTable.Order(0).Customer_Accpt!FieldVal)</string>
+        <string>F.Intrinsic.Control.Else</string>
+        <string>	'clearing text boxes</string>
+        <string>	Gui.SS_Form1.txtDriver.Text("")</string>
+        <string>	Gui.SS_Form1.txtTruck.Text("")</string>
+        <string>	Gui.SS_Form1.txtTrailer.Text("")</string>
+        <string>	Gui.SS_Form1.txtPermit.Text("")</string>
+        <string>	Gui.SS_Form1.txtPilot.Text("")</string>
+        <string>	Gui.SS_Form1.txtMile.Text("")</string>
+        <string>	Gui.SS_Form1.chkAccept.Value(0)</string>
+        <string>F.Intrinsic.Control.EndIf</string>
+        <string />
+        <string>F.Intrinsic.Control.ExitSub</string>
+        <string />
+        <string>F.Intrinsic.Control.Label("BuildDataTable_Err")</string>
+        <string>F.Intrinsic.Control.If(V.Ambient.ErrorNumber,&lt;&gt;,0)</string>
+        <string>	Function.Intrinsic.String.Concat("Project: GCG_4243_Freight_Cost.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)</string>
+        <string>	F.Intrinsic.UI.Msgbox(V.Local.sError)</string>
+        <string>	F.Intrinsic.Control.CallSub(ss_form1_unload)</string>
+        <string>Function.Intrinsic.Control.EndIf</string>
+        <string />
+        <string />
+        <string>Program.Sub.BuildDataTable.End</string>
+        <string />
+        <string>Program.Sub.UpdateDataTable.Start</string>
+        <string>F.Intrinsic.Control.SetErrorHandler("UpdateDataTable_Err")</string>
+        <string>F.Intrinsic.Control.ClearErrors</string>
+        <string />
+        <string>V.Local.sError.Declare(String)</string>
+        <string />
+        <string>F.Intrinsic.Control.If(V.DataTable.Order.RowCount--,=,0)</string>
+        <string>	'updating values before saving</string>
+        <string>	F.Data.DataTable.SetValue("Order",0,"Driver",V.Screen.SS_Form1!txtDriver.Text,"Truck_No",V.Screen.SS_Form1!txtTruck.Text,"Trailer_No",V.Screen.SS_Form1!txtTrailer.Text,"Permit_Cost",V.Screen.SS_Form1!txtPermit.Text,"Pilot_Cost",V.Screen.SS_Form1!txtPilot.Text,"Cost_Per_Mile",V.Screen.SS_Form1!txtMile.Text,"Customer_Accpt",V.Screen.SS_Form1!chkAccept.Value)</string>
+        <string>F.Intrinsic.Control.Else</string>
+        <string>	'adding new record</string>
+        <string>	F.Data.DataTable.AddRow("Order","Order_No",V.Global.sOrder_No,"Order_Suffix",V.Global.sSuffix,"Driver",V.Screen.SS_Form1!txtDriver.Text,"Truck_No",V.Screen.SS_Form1!txtTruck.Text,"Trailer_No",V.Screen.SS_Form1!txtTrailer.Text,"Permit_Cost",V.Screen.SS_Form1!txtPermit.Text,"Pilot_Cost",V.Screen.SS_Form1!txtPilot.Text,"Cost_Per_Mile",V.Screen.SS_Form1!txtMile.Text,"Customer_Accpt",V.Screen.SS_Form1!chkAccept.Value)</string>
+        <string>F.Intrinsic.Control.EndIf</string>
+        <string />
+        <string>F.Intrinsic.Control.ExitSub</string>
+        <string />
+        <string>F.Intrinsic.Control.Label("UpdateDataTable_Err")</string>
+        <string>F.Intrinsic.Control.If(V.Ambient.ErrorNumber,&lt;&gt;,0)</string>
+        <string>	Function.Intrinsic.String.Concat("Project: GCG_4243_Freight_Cost.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)</string>
+        <string>	F.Intrinsic.UI.Msgbox(V.Local.sError)</string>
+        <string>Function.Intrinsic.Control.EndIf</string>
+        <string />
+        <string />
+        <string>Program.Sub.UpdateDataTable.End</string>
+        <string />
+        <string>Program.Sub.Comments.Start</string>
+        <string>${$0$}$GCG_4243_Freight_Cost$}$RLK$}$12/19/2016 8:58:25 AM$}$False</string>
+        <string>${$1$}$$}$$}$1$}$25910$}$OES099 Populate Hook$}$12/19/2016 12:54:12 PM$}$(Program: ORD099GI?; Screen: OES099)</string>
+        <string />
+        <string>${$1$}$$}$$}$0$}$25980$}$OES099-SCRIPT-1$}$12/19/2016 8:58:25 AM$}$(Program: ORD099GI; Screen: OES099)</string>
+        <string />
+        <string>Program.Sub.Comments.End</string>
+        <string />
+        <string>Program.Sub.ScreenSS.Start</string>
+        <string>SS_Form1{{CAPTION::Frieght Charges</string>
+        <string>SS_Form1.CTRL{{NAME::txtDriver\\TYPE::2\\CAPTION::Driver\\TABSTOP::1\\GROUP::1\\BROWSER::0\\SIZE::1.5</string>
+        <string>SS_Form1.CTRL{{NAME::txtTruck\\TYPE::2\\CAPTION::Truck Number\\TABSTOP::2\\GROUP::1\\BROWSER::0\\SIZE::1.5</string>
+        <string>SS_Form1.CTRL{{NAME::txtTrailer\\TYPE::2\\CAPTION::Tailer Number\\TABSTOP::3\\GROUP::1\\BROWSER::0\\SIZE::1.5</string>
+        <string>SS_Form1.CTRL{{NAME::txtPermit\\TYPE::2\\CAPTION::Permit Cost\\TABSTOP::4\\GROUP::2\\BROWSER::0\\SIZE::1</string>
+        <string>SS_Form1.CTRL{{NAME::txtPilot\\TYPE::2\\CAPTION::Pilot Car Cost\\TABSTOP::5\\GROUP::2\\BROWSER::0\\SIZE::1</string>
+        <string>SS_Form1.CTRL{{NAME::txtMile\\TYPE::2\\CAPTION::Cost Per Mile\\TABSTOP::6\\GROUP::2\\BROWSER::0\\SIZE::1</string>
+        <string>SS_Form1.CTRL{{NAME::chkAccept\\TYPE::9\\CAPTION::Customer Accepts Ship Date\\TABSTOP::7\\GROUP::-1\\SUBGROUP::1\\BROWSER::0\\SIZE::1</string>
+        <string>SS_Form1.CTRL{{NAME::cmdAdd\\TYPE::5\\CAPTION::Save\\TABSTOP::8\\GROUP::-1\\BROWSER::0\\SIZE::1</string>
+        <string />
+        <string>Program.Sub.ScreenSS.End</string>
+      </Lines>
+    </TextStrings>
+  </TextSource>
+  <Scrolling>
+    <WindowOriginY>172</WindowOriginY>
+  </Scrolling>
+  <Outlining>
+    <AllowOutlining>true</AllowOutlining>
+    <ImageSize>8</ImageSize>
+    <Ranges>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>0</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>79</Y>
+        </EndPoint>
+        <Text>Program.Sub.ScreenSU</Text>
+        <DisplayText>Program.Sub.ScreenSU</DisplayText>
+        <Visible>false</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>81</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>84</Y>
+        </EndPoint>
+        <Text>Program.Sub.Preflight</Text>
+        <DisplayText>Program.Sub.Preflight</DisplayText>
+        <Visible>false</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>86</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>132</Y>
+        </EndPoint>
+        <Text>Program.Sub.Main</Text>
+        <DisplayText>Program.Sub.Main</DisplayText>
+        <Visible>true</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>134</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>161</Y>
+        </EndPoint>
+        <Text>Program.Sub.SS_Form1_UnLoad</Text>
+        <DisplayText>Program.Sub.SS_Form1_UnLoad</DisplayText>
+        <Visible>true</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>163</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>193</Y>
+        </EndPoint>
+        <Text>Program.Sub.cmdSave_Click</Text>
+        <DisplayText>Program.Sub.cmdSave_Click</DisplayText>
+        <Visible>true</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>195</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>236</Y>
+        </EndPoint>
+        <Text>Program.Sub.CheckFrieghtCost</Text>
+        <DisplayText>Program.Sub.CheckFrieghtCost</DisplayText>
+        <Visible>true</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>238</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>280</Y>
+        </EndPoint>
+        <Text>Program.Sub.BuildDataTable</Text>
+        <DisplayText>Program.Sub.BuildDataTable</DisplayText>
+        <Visible>true</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>282</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>305</Y>
+        </EndPoint>
+        <Text>Program.Sub.UpdateDataTable</Text>
+        <DisplayText>Program.Sub.UpdateDataTable</DisplayText>
+        <Visible>true</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>307</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>313</Y>
+        </EndPoint>
+        <Text>Program.Sub.Comments</Text>
+        <DisplayText>Program.Sub.Comments</DisplayText>
+        <Visible>false</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>315</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>326</Y>
+        </EndPoint>
+        <Text>Program.Sub.ScreenSS</Text>
+        <DisplayText>Program.Sub.ScreenSS</DisplayText>
+        <Visible>false</Visible>
+        <Level>0</Level>
+      </Range>
+    </Ranges>
+  </Outlining>
+  <HyperText />
+  <Spelling />
+  <Braces />
+</SyntaxEdit>
