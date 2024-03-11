@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SyntaxEdit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BorderStyle>None</BorderStyle>
+  <Pages>
+    <DefaultPage>
+      <Header>
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+      </Header>
+      <Footer>
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+      </Footer>
+      <PageSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </PageSize>
+    </DefaultPage>
+  </Pages>
+  <DisplayStrings />
+  <Selection>
+    <SelectionRect>
+      <Location>
+        <X>0</X>
+        <Y>230</Y>
+      </Location>
+      <Size>
+        <Width>24</Width>
+        <Height>2</Height>
+      </Size>
+      <X>0</X>
+      <Y>230</Y>
+      <Width>24</Width>
+      <Height>2</Height>
+    </SelectionRect>
+    <Options>UseColors OverwriteBlocks SelectLineOnTripleClick CopyLineWhenEmpty SelectWordOnCtrlClick</Options>
+  </Selection>
+  <Gutter>
+    <LineNumbersForeColor>WindowText</LineNumbersForeColor>
+    <Options>PaintLineNumbers PaintBookMarks PaintLineModificators</Options>
+  </Gutter>
+  <Margin>
+    <Visible>false</Visible>
+  </Margin>
+  <LineStyles />
+  <LineSeparator />
+  <Printing>
+    <Footer>
+      <Offset>
+        <X>0</X>
+        <Y>0</Y>
+      </Offset>
+    </Footer>
+    <Header>
+      <Offset>
+        <X>0</X>
+        <Y>0</Y>
+      </Offset>
+    </Header>
+  </Printing>
+  <WhiteSpace />
+  <TextSource>
+    <Position>
+      <X>0</X>
+      <Y>230</Y>
+    </Position>
+    <Lexer>
+      <Scheme>
+        <Author>Quantum Whale, LLC.</Author>
+        <Copyright>Copyright (c) 2004 - 2014 Quantum Whale LLC.</Copyright>
+        <FileType>gas</FileType>
+        <Version>1.5</Version>
+        <Styles>
+          <Style>
+            <Name>idents</Name>
+            <ForeColor>ControlText</ForeColor>
+          </Style>
+          <Style>
+            <Name>numbers</Name>
+            <ForeColor>ControlText</ForeColor>
+          </Style>
+          <Style>
+            <Name>reswords</Name>
+            <ForeColor>Blue</ForeColor>
+          </Style>
+          <Style>
+            <Name>comments</Name>
+            <ForeColor>Green</ForeColor>
+            <PlainText>true</PlainText>
+          </Style>
+          <Style>
+            <Name>xmlcomments</Name>
+            <ForeColor>Gray</ForeColor>
+          </Style>
+          <Style>
+            <Name>symbols</Name>
+            <ForeColor>WindowText</ForeColor>
+          </Style>
+          <Style>
+            <Name>whitespace</Name>
+            <ForeColor>WindowText</ForeColor>
+          </Style>
+          <Style>
+            <Name>strings</Name>
+            <ForeColor>Maroon</ForeColor>
+            <PlainText>true</PlainText>
+          </Style>
+          <Style>
+            <Name>directives</Name>
+            <ForeColor>Blue</ForeColor>
+          </Style>
+          <Style>
+            <Name>htmlparams</Name>
+            <ForeColor>Red</ForeColor>
+          </Style>
+          <Style>
+            <Name>syntax errors</Name>
+            <ForeColor>Red</ForeColor>
+          </Style>
+          <Style>
+            <Name>codes nippets</Name>
+            <ForeColor>Black</ForeColor>
+            <BackColor>255:180:228:180</BackColor>
+          </Style>
+          <Style>
+            <Name>GabReservedWords</Name>
+            <ForeColor>Blue</ForeColor>
+          </Style>
+          <Style>
+            <Name>GabTokenWithBrackets</Name>
+            <ForeColor>Gray</ForeColor>
+          </Style>
+          <Style>
+            <Name>GabFunctionIntrinsicDebug</Name>
+            <ForeColor>White</ForeColor>
+            <BackColor>Red</BackColor>
+            <FontStyle>Bold</FontStyle>
+            <PlainText>true</PlainText>
+          </Style>
+          <Style>
+            <Name>GabVariable</Name>
+            <ForeColor>Teal</ForeColor>
+          </Style>
+          <Style>
+            <Name>GabVariableSystemDefined</Name>
+            <ForeColor>Teal</ForeColor>
+            <FontStyle>Bold Italic</FontStyle>
+          </Style>
+          <Style>
+            <Name>GabGui</Name>
+            <ForeColor>OrangeRed</ForeColor>
+          </Style>
+          <Style>
+            <Name>GabProgramSubStartEnd</Name>
+            <ForeColor>Black</ForeColor>
+            <BackColor>LightGray</BackColor>
+            <FontStyle>Bold</FontStyle>
+            <PlainText>true</PlainText>
+          </Style>
+        </Styles>
+      </Scheme>
+    </Lexer>
+    <TextStrings>
+      <Lines>
+        <string>Program.Sub.ScreenSU.Start</string>
+        <string>Gui.SS_Form1..create</string>
+        <string>Gui.SS_Form1..caption("Shipment Schedule")</string>
+        <string>Gui.SS_Form1..size(4135,2210)</string>
+        <string>Gui.SS_Form1..position(0,0)</string>
+        <string>Gui.SS_Form1..alwaysontop(False)</string>
+        <string>Gui.SS_Form1..fontname("Arial")</string>
+        <string>Gui.SS_Form1..fontsize(8)</string>
+        <string>Gui.SS_Form1..forecolor(0)</string>
+        <string>Gui.SS_Form1..fontstyle(,,,)</string>
+        <string>Gui.SS_Form1..BackColor(-2147483633)</string>
+        <string>Gui.SS_Form1..controlbox(True)</string>
+        <string>Gui.SS_Form1..maxbutton(False)</string>
+        <string>Gui.SS_Form1..minbutton(False)</string>
+        <string>Gui.SS_Form1..mousepointer(0)</string>
+        <string>Gui.SS_Form1..moveable(True)</string>
+        <string>Gui.SS_Form1..sizeable(False)</string>
+        <string>Gui.SS_Form1..ShowInTaskBar(True)</string>
+        <string>Gui.SS_Form1..titlebar(True)</string>
+        <string>Gui.SS_Form1..MinX(0)</string>
+        <string>Gui.SS_Form1..MinY(0)</string>
+        <string>Gui.SS_Form1..Event(UnLoad,SS_Form1_UnLoad)</string>
+        <string>Gui.SS_Form1.lbl_dtpBegDate.create(label,"Beginning Date",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)</string>
+        <string>Gui.SS_Form1.lbl_dtpBegDate.LabelStretch(True)</string>
+        <string>Gui.SS_Form1.dtpBegDate.create(datepicker)</string>
+        <string>Gui.SS_Form1.dtpBegDate.visible(True)</string>
+        <string>Gui.SS_Form1.dtpBegDate.size(1800,345)</string>
+        <string>Gui.SS_Form1.dtpBegDate.position(100,335)</string>
+        <string>Gui.SS_Form1.dtpBegDate.enabled(True)</string>
+        <string>Gui.SS_Form1.dtpBegDate.fontname("Arial")</string>
+        <string>Gui.SS_Form1.dtpBegDate.tabstop(True)</string>
+        <string>Gui.SS_Form1.dtpBegDate.tabindex(1)</string>
+        <string>Gui.SS_Form1.lbl_dtpEndDate.create(label,"Ending Date",True,1800,200,1,1985,135,True,0,Arial,8,-2147483633,0)</string>
+        <string>Gui.SS_Form1.lbl_dtpEndDate.LabelStretch(True)</string>
+        <string>Gui.SS_Form1.dtpEndDate.create(datepicker)</string>
+        <string>Gui.SS_Form1.dtpEndDate.visible(True)</string>
+        <string>Gui.SS_Form1.dtpEndDate.size(1800,345)</string>
+        <string>Gui.SS_Form1.dtpEndDate.position(1985,335)</string>
+        <string>Gui.SS_Form1.dtpEndDate.enabled(True)</string>
+        <string>Gui.SS_Form1.dtpEndDate.fontname("Arial")</string>
+        <string>Gui.SS_Form1.dtpEndDate.tabstop(True)</string>
+        <string>Gui.SS_Form1.dtpEndDate.tabindex(2)</string>
+        <string>Gui.SS_Form1.chkAllDates.create(checkbox)</string>
+        <string>Gui.SS_Form1.chkAllDates.Caption("All Dates")</string>
+        <string>Gui.SS_Form1.chkAllDates.visible(True)</string>
+        <string>Gui.SS_Form1.chkAllDates.size(1800,300)</string>
+        <string>Gui.SS_Form1.chkAllDates.position(105,690)</string>
+        <string>Gui.SS_Form1.chkAllDates.enabled(True)</string>
+        <string>Gui.SS_Form1.chkAllDates.fontname("Arial")</string>
+        <string>Gui.SS_Form1.chkAllDates.fontsize(8)</string>
+        <string>Gui.SS_Form1.chkAllDates.tabstop(True)</string>
+        <string>Gui.SS_Form1.chkAllDates.tabindex(3)</string>
+        <string>Gui.SS_Form1.chkAllDates.Event(Click,chkAllDates_Click)</string>
+        <string>Gui.SS_Form1.cmdPrint.create(button)</string>
+        <string>Gui.SS_Form1.cmdPrint.Caption("Print")</string>
+        <string>Gui.SS_Form1.cmdPrint.visible(True)</string>
+        <string>Gui.SS_Form1.cmdPrint.size(1005,360)</string>
+        <string>Gui.SS_Form1.cmdPrint.position(105,1230)</string>
+        <string>Gui.SS_Form1.cmdPrint.enabled(True)</string>
+        <string>Gui.SS_Form1.cmdPrint.fontname("Arial")</string>
+        <string>Gui.SS_Form1.cmdPrint.fontsize(8)</string>
+        <string>Gui.SS_Form1.cmdPrint.tabstop(True)</string>
+        <string>Gui.SS_Form1.cmdPrint.tabindex(4)</string>
+        <string>Gui.SS_Form1.cmdPrint.Event(Click,cmdPrint_Click)</string>
+        <string>Program.Sub.ScreenSU.End</string>
+        <string />
+        <string>Program.Sub.Preflight.Start</string>
+        <string>Variable.Global.lBIRunID.Declare(Long,0)</string>
+        <string>Variable.Global.lLogID.Declare(Long,0)</string>
+        <string>Variable.Global.sDateSelection.Declare(String)</string>
+        <string>Program.Sub.Preflight.End</string>
+        <string />
+        <string>Program.Sub.Main.Start</string>
+        <string>F.Intrinsic.Control.SetErrorHandler("Main_Err")</string>
+        <string>F.Intrinsic.Control.ClearErrors</string>
+        <string />
+        <string>V.Local.sError.Declare(String)</string>
+        <string />
+        <string>'opening connection</string>
+        <string>F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)</string>
+        <string />
+        <string>Gui.SS_Form1..Show</string>
+        <string />
+        <string>F.Intrinsic.Control.ExitSub</string>
+        <string />
+        <string>F.Intrinsic.Control.Label("Main_Err")</string>
+        <string>F.Intrinsic.Control.If(V.Ambient.ErrorNumber,&lt;&gt;,0)</string>
+        <string>	Function.Intrinsic.String.Concat("Project: GCG_4243_Shipment_Schedule.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)</string>
+        <string>	F.Intrinsic.UI.Msgbox(V.Local.sError)</string>
+        <string>	F.Intrinsic.Control.CallSub(ss_form1_unload)</string>
+        <string>Function.Intrinsic.Control.EndIf</string>
+        <string />
+        <string />
+        <string>Program.Sub.Main.End</string>
+        <string />
+        <string>Program.Sub.SS_Form1_UnLoad.Start</string>
+        <string>F.Intrinsic.Control.SetErrorHandler("SS_Form1_UnLoad_Err")</string>
+        <string>F.Intrinsic.Control.ClearErrors</string>
+        <string />
+        <string>V.Local.sError.Declare(String)</string>
+        <string />
+        <string>'closing connection</string>
+        <string>F.ODBC.Connection!con.Close</string>
+        <string>'ending program</string>
+        <string>F.Intrinsic.Control.End</string>
+        <string />
+        <string>F.Intrinsic.Control.ExitSub</string>
+        <string />
+        <string>F.Intrinsic.Control.Label("SS_Form1_UnLoad_Err")</string>
+        <string>F.Intrinsic.Control.If(V.Ambient.ErrorNumber,&lt;&gt;,0)</string>
+        <string>	Function.Intrinsic.String.Concat("Project: GCG_4243_Shipment_Schedule.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)</string>
+        <string>	F.Intrinsic.UI.Msgbox(V.Local.sError)</string>
+        <string>	F.Intrinsic.Control.End</string>
+        <string />
+        <string>Function.Intrinsic.Control.EndIf</string>
+        <string />
+        <string />
+        <string>Program.Sub.SS_Form1_UnLoad.End</string>
+        <string />
+        <string>Program.Sub.chkAllDates_Click.Start</string>
+        <string>F.Intrinsic.Control.SetErrorHandler("chkAllDates_Click_Err")</string>
+        <string>F.Intrinsic.Control.ClearErrors</string>
+        <string />
+        <string>V.Local.sError.Declare(String)</string>
+        <string />
+        <string>F.Intrinsic.Control.If(V.Screen.SS_Form1!chkAllDates.Value,=,1)</string>
+        <string>	'disableing datepickers if all dates is selected</string>
+        <string>	Gui.SS_Form1.dtpBegDate.Enabled(False)</string>
+        <string>	Gui.SS_Form1.dtpEndDate.Enabled(False)</string>
+        <string>F.Intrinsic.Control.Else</string>
+        <string>	'enabling datepickersi if all dates is not selected</string>
+        <string>	Gui.SS_Form1.dtpBegDate.Enabled(True)</string>
+        <string>	Gui.SS_Form1.dtpEndDate.Enabled(True)</string>
+        <string>F.Intrinsic.Control.EndIf</string>
+        <string />
+        <string>F.Intrinsic.Control.ExitSub</string>
+        <string />
+        <string>F.Intrinsic.Control.Label("chkAllDates_Click_Err")</string>
+        <string>F.Intrinsic.Control.If(V.Ambient.ErrorNumber,&lt;&gt;,0)</string>
+        <string>	Function.Intrinsic.String.Concat("Project: GCG_4243_Shipment_Schedule.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)</string>
+        <string>	F.Intrinsic.UI.Msgbox(V.Local.sError)</string>
+        <string>	F.Intrinsic.Control.CallSub(ss_form1_unload)</string>
+        <string>Function.Intrinsic.Control.EndIf</string>
+        <string />
+        <string />
+        <string>Program.Sub.chkAllDates_Click.End</string>
+        <string />
+        <string>Program.Sub.cmdPrint_Click.Start</string>
+        <string>F.Intrinsic.Control.SetErrorHandler("cmdPrint_Click_Err")</string>
+        <string>F.Intrinsic.Control.ClearErrors</string>
+        <string />
+        <string>V.Local.sError.Declare(String)</string>
+        <string>V.Local.sSql.Declare(String)</string>
+        <string>V.Local.sDate1.Declare(String)</string>
+        <string>V.Local.sDate2.Declare(String)</string>
+        <string />
+        <string>'Disappear the screen</string>
+        <string>Gui.SS_Form1..Visible(False)</string>
+        <string />
+        <string>F.Global.BI.GetRunID(V.Global.lBIRunID)</string>
+        <string />
+        <string>F.Global.BI.StartLogging(V.Global.lBIRunID,-1,-1,"",V.Global.lLogID)</string>
+        <string />
+        <string>V.Local.sDate1.Set(V.Screen.SS_Form1!dtpBegDate.Value)</string>
+        <string>V.Local.sDate2.Set(V.Screen.SS_Form1!dtpEndDate.Value)</string>
+        <string />
+        <string>F.Intrinsic.Control.If(V.Screen.SS_Form1!chkAllDates.Value,=,1)</string>
+        <string>	'creating sql query to populate datatable</string>
+        <string>	F.Intrinsic.String.Build("Select {0} as Birunid, a.Date_Shipped, a.Customer, b.Part, c.Address_1_Ship, c.City_Ship, c.State_Ship, c.Country_Ship, a.Order_No, a.Order_Suffix From V_Shipment_Header a Left Join V_Shipment_Lines b",V.Global.lBIRunID,V.Local.sSql)</string>
+        <string>	F.Intrinsic.String.Build("{0} on a.Order_No = b.Order_No and a.Order_Suffix = b.Order_Suffix Left Join V_Shipment_ShipTo c on a.Order_No = c.Order_No and a.Order_Suffix = c.Order_Suffix Order by a.Order_No,a.Order_Suffix",V.Local.sSql,V.Local.sSql)</string>
+        <string>F.Intrinsic.Control.Else</string>
+        <string>	'creating sql query to populate datatable</string>
+        <string>	F.Intrinsic.String.Build("Select {0} as Birunid, a.Date_Shipped, a.Customer, b.Part, c.Address_1_Ship, c.City_Ship, c.State_Ship, c.Country_Ship, a.Order_No, a.Order_Suffix From V_Shipment_Header a Left Join V_Shipment_Lines b",V.Global.lBIRunID,V.Local.sSql)</string>
+        <string>	F.Intrinsic.String.Build("{0} on a.Order_No = b.Order_No and a.Order_Suffix = b.Order_Suffix Left Join V_Shipment_ShipTo c on a.Order_No = c.Order_No and a.Order_Suffix = c.Order_Suffix Where a.Date_Shipped Between '{1}' and '{2}' Order by a.Order_No,a.Order_Suffix",V.Local.sSql,V.Local.sDate1.PervasiveDate,V.Local.sDate2.PervasiveDate,V.Local.sSql)</string>
+        <string>F.Intrinsic.Control.EndIf</string>
+        <string />
+        <string>'creating datatable</string>
+        <string>F.Data.DataTable.CreateFromSQL("Schedule","con",V.Local.sSql,True)</string>
+        <string />
+        <string>'saving to custom table</string>
+        <string>F.Intrinsic.Control.If(V.DataTable.Schedule.RowCount,&gt;=,0)</string>
+        <string>	F.Data.DataTable.SaveToDB("Schedule","con","GCG_4243_Ship_Schd","",128)</string>
+        <string>F.Intrinsic.Control.EndIf</string>
+        <string>'stop logging</string>
+        <string>F.Global.BI.StopLogging(V.Global.lLogID)</string>
+        <string />
+        <string>'call sub to print report</string>
+        <string>F.Intrinsic.Control.CallSub(Callbi)</string>
+        <string />
+        <string>'call sub to end program</string>
+        <string>F.Intrinsic.Control.CallSub(Ss_form1_unload)</string>
+        <string />
+        <string>F.Intrinsic.Control.ExitSub</string>
+        <string />
+        <string>F.Intrinsic.Control.Label("cmdPrint_Click_Err")</string>
+        <string>F.Intrinsic.Control.If(V.Ambient.ErrorNumber,&lt;&gt;,0)</string>
+        <string>	Function.Intrinsic.String.Concat("Project: GCG_4243_Shipment_Schedule.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)</string>
+        <string>	F.Intrinsic.UI.Msgbox(V.Local.sError)</string>
+        <string>	F.Intrinsic.Control.CallSub(ss_form1_unload)</string>
+        <string>Function.Intrinsic.Control.EndIf</string>
+        <string />
+        <string />
+        <string>Program.Sub.cmdPrint_Click.End</string>
+        <string />
+        <string>Program.Sub.CallBI.Start</string>
+        <string>F.Intrinsic.Control.SetErrorHandler("CallBI_Err")</string>
+        <string>F.Intrinsic.Control.ClearErrors</string>
+        <string />
+        <string>V.Local.sError.Declare(String)</string>
+        <string>V.Local.sValues.Declare(String)</string>
+        <string>V.Local.sParams.Declare(String)</string>
+        <string>V.Local.iRet.Declare(Long)</string>
+        <string />
+        <string>V.Local.sParams.Set("AllDates*!*DateSelection")</string>
+        <string>F.Intrinsic.String.Build("{0}*!*{1}",V.Screen.SS_Form1!chkAllDates.Value,V.Global.sDateSelection,V.Local.sValues)</string>
+        <string />
+        <string>F.Global.BI.RunReportPreProcessor(V.Global.lBIRunID,V.Global.lLogID,V.Local.sParams,V.Local.sValues,"",-1,True,"",-1,"",-1,"","",V.Local.iRet)</string>
+        <string />
+        <string>F.Intrinsic.Control.ExitSub</string>
+        <string />
+        <string>F.Intrinsic.Control.Label("CallBI_Err")</string>
+        <string>F.Intrinsic.Control.If(V.Ambient.ErrorNumber,&lt;&gt;,0)</string>
+        <string>	Function.Intrinsic.String.Concat("Project: GCG_4243_Shipment_Schedule.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)</string>
+        <string>	F.Intrinsic.UI.Msgbox(V.Local.sError)</string>
+        <string>	F.Intrinsic.Control.CallSub(ss_form1_unload)</string>
+        <string>Function.Intrinsic.Control.EndIf</string>
+        <string />
+        <string />
+        <string>Program.Sub.CallBI.End</string>
+        <string />
+        <string>Program.Sub.Comments.Start</string>
+        <string>${$0$}$$}$RLK$}$12/19/2016 2:16:19 PM$}$False</string>
+        <string>Program.Sub.Comments.End</string>
+        <string />
+        <string>Program.Sub.ScreenSS.Start</string>
+        <string>SS_Form1{{CAPTION::Shipment Schedule</string>
+        <string>SS_Form1.CTRL{{NAME::dtpBegDate\\TYPE::6\\CAPTION::Beginning Date\\TABSTOP::1\\GROUP::1\\BROWSER::0\\SIZE::1</string>
+        <string>SS_Form1.CTRL{{NAME::dtpEndDate\\TYPE::6\\CAPTION::Ending Date\\TABSTOP::2\\GROUP::1\\BROWSER::0\\SIZE::1</string>
+        <string>SS_Form1.CTRL{{NAME::chkAllDates\\TYPE::9\\CAPTION::All Dates\\TABSTOP::3\\GROUP::-1\\SUBGROUP::1\\BROWSER::0\\SIZE::1</string>
+        <string>SS_Form1.CTRL{{NAME::cmdPrint\\TYPE::5\\CAPTION::Print\\TABSTOP::4\\GROUP::-1\\BROWSER::0\\SIZE::1</string>
+        <string />
+        <string>Program.Sub.ScreenSS.End</string>
+        <string />
+        <string />
+      </Lines>
+    </TextStrings>
+  </TextSource>
+  <Scrolling>
+    <WindowOriginY>109</WindowOriginY>
+    <Options>None</Options>
+  </Scrolling>
+  <Outlining>
+    <AllowOutlining>true</AllowOutlining>
+    <ImageSize>8</ImageSize>
+    <Ranges>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>0</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>64</Y>
+        </EndPoint>
+        <Text>Program.Sub.ScreenSU</Text>
+        <DisplayText>Program.Sub.ScreenSU</DisplayText>
+        <Visible>false</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>66</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>70</Y>
+        </EndPoint>
+        <Text>Program.Sub.Preflight</Text>
+        <DisplayText>Program.Sub.Preflight</DisplayText>
+        <Visible>false</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>72</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>93</Y>
+        </EndPoint>
+        <Text>Program.Sub.Main</Text>
+        <DisplayText>Program.Sub.Main</DisplayText>
+        <Visible>true</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>95</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>117</Y>
+        </EndPoint>
+        <Text>Program.Sub.SS_Form1_UnLoad</Text>
+        <DisplayText>Program.Sub.SS_Form1_UnLoad</DisplayText>
+        <Visible>true</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>119</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>145</Y>
+        </EndPoint>
+        <Text>Program.Sub.chkAllDates_Click</Text>
+        <DisplayText>Program.Sub.chkAllDates_Click</DisplayText>
+        <Visible>true</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>147</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>202</Y>
+        </EndPoint>
+        <Text>Program.Sub.cmdPrint_Click</Text>
+        <DisplayText>Program.Sub.cmdPrint_Click</DisplayText>
+        <Visible>true</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>204</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>228</Y>
+        </EndPoint>
+        <Text>Program.Sub.CallBI</Text>
+        <DisplayText>Program.Sub.CallBI</DisplayText>
+        <Visible>true</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>230</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>232</Y>
+        </EndPoint>
+        <Text>Program.Sub.Comments</Text>
+        <DisplayText>Program.Sub.Comments</DisplayText>
+        <Visible>false</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>234</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>241</Y>
+        </EndPoint>
+        <Text>Program.Sub.ScreenSS</Text>
+        <DisplayText>Program.Sub.ScreenSS</DisplayText>
+        <Visible>false</Visible>
+        <Level>0</Level>
+      </Range>
+    </Ranges>
+  </Outlining>
+  <HyperText />
+  <Spelling />
+  <Braces />
+</SyntaxEdit>
